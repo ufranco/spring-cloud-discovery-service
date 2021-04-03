@@ -5,6 +5,14 @@ server:
 spring:
   application:
     name: discovery-service
+  cloud:
+    config:
+      server:
+        prefix: /config
+        git:
+          uri: https://github.com/ufranco/spring-cloud-application-properties
+        bootstrap: true
+
 
 eureka:
   client:
@@ -14,4 +22,5 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     hostname: localhost
+
 
